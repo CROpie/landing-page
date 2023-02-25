@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-header {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.intro {
+    background-color: orange;
+}
+
+.info {
+    background-color: yellow;
+}
+
+.quote {
+    background-color: green;
+}
+
+.sign-up {
+    background-color: blue;
+}
+
+.footer {
+    background-color: purple;
+}
