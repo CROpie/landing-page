@@ -1,44 +1,199 @@
 * {
     margin: 0px;
     padding: 0px;
-    border: 1px solid black;
+    box-sizing: border-box;
+
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.body {
+    min-height: 100vh;
 }
 
 .header {
-    background-color: red;
+    background-color: #1F2937;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #E5E7EB;
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .list-header {
     display: flex;
     list-style: none;
     gap: 16px;
+    color: #E5E7EB;
+    font-size: 18px;
 }
 
 .intro {
-    background-color: orange;
+    background-color: #1F2937;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intro-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-header {
+    color: #F9FAF8;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    color: #E5E7EB;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.intro-button {
+    color: #E5E7EB;
+    background: #3882F6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 800;
+    border: 2px solid #3882F6;
+}
+
+.intro-image {
+    min-height: 250px;
+    margin-left: 50px;
+    width: 400px;
 }
 
 .info {
-    background-color: yellow;
+    display: flex;
+    text-align: center;
+    background-color:white;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-header {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.box-image {
+    height: 150px;
+    width: 150px;
+}
+
+.box-text {
+    width: 150px;
 }
 
 .quote {
-    background-color: green;
+    background-color:#E5E7EB;
+
+}
+
+.quote-text {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 600;
+    align-self: flex-end;
 }
 
 .sign-up {
-    background-color: blue;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #3882F6;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    flex-shrink: 0;
+  }
+
+
+.modal-heading {
+    font-size: 24px;
+    color: #E5E7EB;
+}
+
+.modal-text {
+    color: #E5E7EB;
+}
+
+.modal-button {
+    color: #E5E7EB;
+    background: #3882F6;
+    border: 2px solid #E5E7EB;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 800;
 }
 
 .footer {
-    background-color: purple;
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.footer-text {
+    color: #E5E7EB;
+}
+
+.intro,
+.info,
+.quote,
+.sign-up {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.header,
+.footer {
+    height: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+/* notes
+
+for box stacking to work, need justify-content: center. space-between wont work.
+instead of explicit heights, better to have padding instead ??
+explicit heights seem to cause other issues
+boxes will have a shadow unless they have a border instead (?)
+
+body min-height: 100vh; seems good, not entirely sure why. or if it is different to height 100vh
+sometimes (like right now) it doesnt do anything.. maybe to do with explicit heights of other things..
+perhaps only useful if not enough content? 
